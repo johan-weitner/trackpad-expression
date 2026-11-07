@@ -79,7 +79,7 @@ func sendCC(_ value: UInt8) {
     var list = MIDIEventList()
     var packet = MIDIEventListInit(&list, ._1_0)
     var w = word
-    packet = MIDIEventListAdd(&list, MemoryLayout<MIDIEventList>.size, packet, 0, 1, &w)
+    packet = MIDIEventListAdd(&list, MemoryLayout<MIDIEventList>.size, packet, mach_absolute_time(), 1, &w)
     MIDIReceivedEventList(source, &list)
 }
 

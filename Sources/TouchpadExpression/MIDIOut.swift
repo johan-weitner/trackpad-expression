@@ -28,7 +28,9 @@ final class MIDIOut {
             | UInt32(value & 0x7F)
         var list = MIDIEventList()
         let packet = MIDIEventListInit(&list, ._1_0)
-        _ = MIDIEventListAdd(&list, MemoryLayout<MIDIEventList>.size, packet, 0, 1, &word)
+        // Stamp with the current host time. Timestamp 0 ("now") shows up in DAW MIDI monitors
+        // but can be dropped by audio engines that schedule input against the host clock.
+        _ = MIDIEventListAdd(&list, MemoryLayout<MIDIEventList>.size, packet, mach_absolute_time(), 1, &word)
         MIDIReceivedEventList(source, &list)
     }
 }

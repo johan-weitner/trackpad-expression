@@ -10,6 +10,8 @@ It appears to your DAW as a MIDI input device called **Trackpad Expression**.
 - While enabled, a click-through overlay shows each strip's value (no mouse-over needed).
 - Strips run left → right across the trackpad. Each finger sticks to the strip it landed on.
 - In your DAW, add "Trackpad Expression" as a MIDI input and select it on the instrument track.
+  In **Fender Studio Pro / Studio One**, add it as a **Keyboard** (not Instrument or Control
+  Surface), and set the instrument track's input to it or to *All Inputs*.
 
 ## Build
 
