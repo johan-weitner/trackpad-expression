@@ -54,3 +54,7 @@ The version number comes from `CFBundleShortVersionString` in `App/Info.plist`.
   signing, macOS forgets that permission on every rebuild; the self-signed certificate from
   `scripts/create-signing-cert.sh` keeps it stable.
 - Trackpads are detected at launch; relaunch after connecting a new one.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
