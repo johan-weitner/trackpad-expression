@@ -9,7 +9,7 @@ It appears to your DAW as a MIDI input device called **Trackpad Expression**.
 1. Download `TrackpadExpression-<version>.dmg` from the
    [Releases](../../releases) page, open it, and drag **Trackpad Expression** to **Applications**.
 2. Open it once. macOS will say it "cannot verify" the app, because it isn't notarized by
-   Apple (the developer doesn't have a paid Apple Developer account). Click **Done**.
+   Apple. Click **Done**.
 3. Open **System Settings → Privacy & Security**, scroll down to the message about
    Trackpad Expression and click **Open Anyway**, then confirm.
 
