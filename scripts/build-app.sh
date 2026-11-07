@@ -37,6 +37,7 @@ lipo -create -output "$APP/Contents/MacOS/$PRODUCT" \
     .build/arm64-apple-macosx/release/$PRODUCT \
     .build/x86_64-apple-macosx/release/$PRODUCT
 cp App/Info.plist "$APP/Contents/"
+cp App/AppIcon.icns "$APP/Contents/Resources/"
 
 if security find-certificate -c "$CERT_NAME" >/dev/null 2>&1; then
     SIGN_ID="$CERT_NAME"
